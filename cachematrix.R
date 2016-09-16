@@ -1,5 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makecache function contains four functions.It get and set the values of matrix and inverse of matrix
+## in the parent environment
+##cachesolve function first check whether given argument is calculated before or not.
+##If the values are calculated before then inverse of matrix is retrieved from the parent environment
+##If the values are not calculated then inverse of that matrix is calculated in the cachesolve function.
 
 ## Write a short comment describing this function
 
@@ -11,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   }
   get<-function() x             #Function for Getting the value of x from the parent environment
   setinver<-function(invers1) m <<- invers1     # m is defined in the parent environment,the value of m is assigned with the input value in this function
-  getinver<-function(invers1) m#Function for getting the value of m from parent environment
+  getinver<-function() m   #Function for getting the value of m from parent environment
   list(set =set,get=get,setinver=setinver,getinver=getinver)  #Each of the function is given a name and defined within a list.It is returned to the parent environment.
 }
 
